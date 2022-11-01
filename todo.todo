@@ -1,0 +1,18 @@
+plan:
+  ✔ create base tables in dsdb as vw @done(2022-03-03 00:45) @project(plan)
+  ✔ create historical data table as vw (in progress) @done(2022-03-03 21:57) @project(plan)
+  ✔ create baseline airline cancel rates table (not needed) @done(2022-03-03 00:46) @project(plan)
+  ✔ create premium matrix as vw (in progress) @done(2022-03-16 00:22) @project(plan)
+  ✔ create sqlalch model for premium matrix @done(2022-03-18 10:10) @project(plan)
+  ✔ create function for calculating premium + add av cancellation rate override (80/20) @done(2022-03-25 00:11) @project(plan)
+  ✔ model changes: uuid + updated_at field @done(2022-03-25 00:18) @project(plan)
+  ✔ change responses to {success: …, message: …, data: {{object}}} @done(2022-03-25 00:52) @project(plan)
+  ✔ create api for premium calculation (POST API) with object return @done(2022-03-18 10:10) @project(plan)
+  ✔ create multi post api @done(2022-07-11 18:48) @project(plan)
+  ✔ create matrix manipulation @done(2022-07-11 18:48) @project(plan)
+  ✔ list view for multiple flights @done(2022-07-11 18:49) @project(plan)
+  ✔ update doc for 0 & extremely high value (AC) @done(2022-07-11 18:49) @project(plan)
+
+  ☐ set filters for calculation limit governed by internal var
+  ☐ Create ui and filters for controls
+  ☐ Exponential weighting of weekly results

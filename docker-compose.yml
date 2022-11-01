@@ -1,0 +1,29 @@
+# WARNING: this file is not suitable for production, please use with caution
+version: '3'
+
+services:
+  web:
+    build: .
+    command: gunicorn -b 0.0.0.0:5000 dsapi.wsgi:app
+    env_file:
+      - ./.flaskenv
+    environment:
+      - DATABASE_URI=postgresql://MfYirvifxnawfTHSowdbLBQbjAPTXBRm:RBI8R9x3hJxqdW43udXvJopBkckK4f9zMSP6iBgL0nNOLp6UUfxds91zjzBev9US@postgres:5432/data_science_fc
+    volumes:
+      - ./dsapi:/code/dsapi
+      - ./db/:/db/
+    ports:
+      - "5000:5000"
+
+  postgres:
+    image: postgres:14.1
+    container_name: dsapi_postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_postgres:/var/lib/postgresql/data:Z
+    env_file:
+      - ./.envs/.local/.postgres
+
+volumes:
+  db_postgres:

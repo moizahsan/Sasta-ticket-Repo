@@ -1,0 +1,6 @@
+FLASK_ENV=development
+FLASK_APP=dsapi.app:create_app
+SECRET_KEY=changeme
+DATABASE_URI=postgresql://MfYirvifxnawfTHSowdbLBQbjAPTXBRm:RBI8R9x3hJxqdW43udXvJopBkckK4f9zMSP6iBgL0nNOLp6UUfxds91zjzBev9US@postgres:5432/data_science_fc
+DREMIO_CONNECTION_URL=dremio://dremio:mohib@dremio.sastaticket.pk:31010/Fintech_API
+SEND_FILE_MAX_AGE_DEFAULT=0
